@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgregarDocenteFrgment"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar Docente"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp" />
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Código"
+                android:inputType="number"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etIdentificacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Identificación"
+                android:inputType="number"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo electrónico"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/btnGuardarDocente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardar Docente" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
