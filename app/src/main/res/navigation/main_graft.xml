@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graft"
+    app:startDestination="@id/menuPrincipalFragment3">
+
+    <fragment
+        android:id="@+id/agregarDocenteFrgment"
+        android:name="com.example.appaprendizaje.AgregarDocenteFrgment"
+        android:label="fragment_agregar_docente_frgment"
+        tools:layout="@layout/fragment_agregar_docente_frgment" />
+    <fragment
+        android:id="@+id/agregarCategoriaFragment"
+        android:name="com.example.appaprendizaje.AgregarCategoriaFragment"
+        android:label="fragment_agregar_categoria"
+        tools:layout="@layout/fragment_agregar_categoria" />
+    <fragment
+        android:id="@+id/verDocenteFragment"
+        android:name="com.example.appaprendizaje.VerDocenteFragment"
+        android:label="fragment_ver_docente"
+        tools:layout="@layout/fragment_ver_docente" />
+    <fragment
+        android:id="@+id/verCategoriaFragment"
+        android:name="com.example.appaprendizaje.VerCategoriaFragment"
+        android:label="fragment_ver_categoria"
+        tools:layout="@layout/fragment_ver_categoria" />
+    <fragment
+        android:id="@+id/menuPrincipalFragment3"
+        android:name="com.example.appaprendizaje.MenuPrincipalFragment"
+        android:label="fragment_menu_principal"
+        tools:layout="@layout/fragment_menu_principal" >
+        <action
+            android:id="@+id/action_menuPrincipalFragment3_to_agregarDocenteFrgment"
+            app:destination="@id/agregarDocenteFrgment" />
+        <action
+            android:id="@+id/action_menuPrincipalFragment3_to_agregarCategoriaFragment"
+            app:destination="@id/agregarCategoriaFragment" />
+        <action
+            android:id="@+id/action_menuPrincipalFragment3_to_verDocenteFragment"
+            app:destination="@id/verDocenteFragment" />
+        <action
+            android:id="@+id/action_menuPrincipalFragment3_to_verCategoriaFragment"
+            app:destination="@id/verCategoriaFragment" />
+    </fragment>
+</navigation>
