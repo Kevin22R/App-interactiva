@@ -3,45 +3,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AgregarCategoriaFragment"
-    android:padding="16dp">
+    tools:context=".view.AgregarCategoriaFragment"
+    android:padding="24dp"
+    android:background="@android:color/white">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Agregar Categoría"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp" />
-
-        <EditText
-            android:id="@+id/etNombreCategoria"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre de la Categoría"
-            android:inputType="textPersonName"
-            android:layout_marginBottom="16dp" />
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
-        <EditText
-            android:id="@+id/etDescripcion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Descripción"
-            android:inputType="textMultiLine"
-            android:lines="3"
-            android:gravity="top"
-            android:layout_marginBottom="24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🗂️ Agregar Categoría"
+                android:textSize="24sp"
+                android:layout_marginTop="80dp"
+                android:textStyle="bold"
+                android:textColor="#1E88E5"
+                android:layout_marginBottom="32dp" />
 
-        <Button
-            android:id="@+id/btnGuardarCategoria"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Guardar Categoría" />
-    </LinearLayout>
+            <EditText
+                android:id="@+id/etNombreCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre de la Categoría"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:backgroundTint="#BDBDBD"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripción"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:gravity="top"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:backgroundTint="#BDBDBD"
+                android:layout_marginBottom="32dp" />
+
+            <Button
+                android:id="@+id/btnGuardarCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💾 Guardar Categoría"
+                android:backgroundTint="#43A047"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:padding="14dp"
+                android:elevation="6dp" />
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

@@ -3,49 +3,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuPrincipalFragment"
+    tools:context=".view.MenuPrincipalFragment"
+    android:background="@drawable/menu"
     android:padding="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:layout_gravity="center">
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Menú Principal"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp" />
 
         <Button
             android:id="@+id/btnMostrarDocentes"
-            android:layout_width="match_parent"
+            android:layout_width="318dp"
             android:layout_height="wrap_content"
-            android:text="Mostrar Docentes"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#1E88E5"
+            android:elevation="8dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="14dp"
+            android:text="👨‍🏫 Mostrar Docentes"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnMostrarCategorias"
-            android:layout_width="match_parent"
+            android:layout_width="319dp"
             android:layout_height="wrap_content"
-            android:text="Mostrar Categorías"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#43A047"
+            android:elevation="8dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="14dp"
+            android:text="📚 Mostrar Categorías"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnAgregarCategoria"
-            android:layout_width="match_parent"
+            android:layout_width="323dp"
             android:layout_height="wrap_content"
-            android:text="Agregar Categoría"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#FB8C00"
+            android:elevation="8dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="14dp"
+            android:text="➕ Agregar Categoría"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnAgregarDocente"
-            android:layout_width="match_parent"
+            android:layout_width="318dp"
             android:layout_height="wrap_content"
-            android:text="Agregar Docente" />
+            android:backgroundTint="#8E24AA"
+            android:elevation="8dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="14dp"
+            android:text="📝 Agregar Docente"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
     </LinearLayout>
 </FrameLayout>

@@ -1,4 +1,4 @@
-package com.example.appaprendizaje
+package com.example.appaprendizaje.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import com.example.appaprendizaje.R
 
 class MenuPrincipalFragment : Fragment() {
 
@@ -15,29 +16,28 @@ class MenuPrincipalFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_menu_principal, container, false)
-        val btnirAgregarDocente = root.findViewById<Button>(R.id.btnAgregarDocente)
-        val btnirAgregarCategoria = root.findViewById<Button>(R.id.btnAgregarCategoria)
-        val btnirVerDocente = root.findViewById<Button>(R.id.btnMostrarDocentes)
-        val btnirVerCategoria = root.findViewById<Button>(R.id.btnAgregarCategoria)
 
-        btnirAgregarDocente.setOnClickListener {
+        val btnAgregarDocente = root.findViewById<Button>(R.id.btnAgregarDocente)
+        val btnAgregarCategoria = root.findViewById<Button>(R.id.btnAgregarCategoria)
+        val btnMostrarDocentes = root.findViewById<Button>(R.id.btnMostrarDocentes)
+        val btnMostrarCategorias = root.findViewById<Button>(R.id.btnMostrarCategorias)
+
+        btnAgregarDocente.setOnClickListener {
             findNavController().navigate(R.id.action_menuPrincipalFragment3_to_agregarDocenteFrgment)
         }
 
-        btnirAgregarCategoria.setOnClickListener {
+        btnAgregarCategoria.setOnClickListener {
             findNavController().navigate(R.id.action_menuPrincipalFragment3_to_agregarCategoriaFragment)
         }
 
-        btnirVerDocente.setOnClickListener {
+        btnMostrarDocentes.setOnClickListener {
             findNavController().navigate(R.id.action_menuPrincipalFragment3_to_verDocenteFragment)
         }
 
-        btnirVerCategoria.setOnClickListener {
+        btnMostrarCategorias.setOnClickListener {
             findNavController().navigate(R.id.action_menuPrincipalFragment3_to_verCategoriaFragment)
         }
 
         return root
-
     }
-
 }

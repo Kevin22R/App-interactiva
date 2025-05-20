@@ -6,33 +6,13 @@
     app:startDestination="@id/menuPrincipalFragment3">
 
     <fragment
-        android:id="@+id/agregarDocenteFrgment"
-        android:name="com.example.appaprendizaje.AgregarDocenteFrgment"
-        android:label="fragment_agregar_docente_frgment"
-        tools:layout="@layout/fragment_agregar_docente_frgment" />
-    <fragment
-        android:id="@+id/agregarCategoriaFragment"
-        android:name="com.example.appaprendizaje.AgregarCategoriaFragment"
-        android:label="fragment_agregar_categoria"
-        tools:layout="@layout/fragment_agregar_categoria" />
-    <fragment
-        android:id="@+id/verDocenteFragment"
-        android:name="com.example.appaprendizaje.VerDocenteFragment"
-        android:label="fragment_ver_docente"
-        tools:layout="@layout/fragment_ver_docente" />
-    <fragment
-        android:id="@+id/verCategoriaFragment"
-        android:name="com.example.appaprendizaje.VerCategoriaFragment"
-        android:label="fragment_ver_categoria"
-        tools:layout="@layout/fragment_ver_categoria" />
-    <fragment
         android:id="@+id/menuPrincipalFragment3"
-        android:name="com.example.appaprendizaje.MenuPrincipalFragment"
+        android:name="com.example.appaprendizaje.view.MenuPrincipalFragment"
         android:label="fragment_menu_principal"
-        tools:layout="@layout/fragment_menu_principal" >
+        tools:layout="@layout/fragment_menu_principal">
         <action
             android:id="@+id/action_menuPrincipalFragment3_to_agregarDocenteFrgment"
-            app:destination="@id/agregarDocenteFrgment" />
+            app:destination="@id/agregarDocenteFragment" />
         <action
             android:id="@+id/action_menuPrincipalFragment3_to_agregarCategoriaFragment"
             app:destination="@id/agregarCategoriaFragment" />
@@ -42,5 +22,58 @@
         <action
             android:id="@+id/action_menuPrincipalFragment3_to_verCategoriaFragment"
             app:destination="@id/verCategoriaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/verDocenteFragment"
+        android:name="com.example.appaprendizaje.view.VerDocenteFragment"
+        android:label="fragment_ver_docente"
+        tools:layout="@layout/fragment_ver_docente">
+
+        <action
+            android:id="@+id/action_verDocenteFragment_to_agregarDocenteFragment"
+            app:destination="@id/agregarDocenteFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/agregarDocenteFragment"
+        android:name="com.example.appaprendizaje.view.AgregarDocenteFragment"
+        android:label="fragment_agregar_docente_fragment"
+        tools:layout="@layout/fragment_agregar_docente_frgment">
+
+        <argument
+            android:name="docente"
+            app:argType="com.example.appaprendizaje.model.DocenteEntity"
+            app:nullable="true" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/agregarCategoriaFragment"
+        android:name="com.example.appaprendizaje.view.AgregarCategoriaFragment"
+        android:label="fragment_agregar_categoria"
+        tools:layout="@layout/fragment_agregar_categoria">
+
+        <!-- ✅ Argumento que se recibirá -->
+        <argument
+            android:name="categoria"
+            app:argType="com.example.appaprendizaje.model.CategoriaEntity"
+            app:nullable="true" />
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/verCategoriaFragment"
+        android:name="com.example.appaprendizaje.view.VerCategoriaFragment"
+        android:label="fragment_ver_categoria"
+        tools:layout="@layout/fragment_ver_categoria">
+
+        <!-- ✅ Acción que permite navegar al fragmento de agregar -->
+        <action
+            android:id="@+id/action_verCategoriaFragment_to_agregarCategoriaFragment"
+            app:destination="@id/agregarCategoriaFragment" />
     </fragment>
 </navigation>

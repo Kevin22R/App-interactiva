@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AgregarDocenteFrgment"
+    tools:context=".view.AgregarDocenteFragment"
     android:padding="16dp">
 
     <ScrollView
@@ -19,17 +19,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Agregar Docente"
-                android:textSize="20sp"
+                android:text="👨‍🏫 Agregar Docente"
+                android:textSize="24sp"
+                android:layout_marginTop="80dp"
                 android:textStyle="bold"
-                android:layout_marginBottom="24dp" />
+                android:textColor="#1E88E5"
+                android:layout_marginBottom="32dp" />
 
             <EditText
                 android:id="@+id/etNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nombre"
+                android:hint="Nombre completo"
                 android:inputType="textPersonName"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:backgroundTint="#BDBDBD"
                 android:layout_marginBottom="16dp" />
 
             <EditText
@@ -38,6 +43,9 @@
                 android:layout_height="wrap_content"
                 android:hint="Código"
                 android:inputType="number"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:backgroundTint="#BDBDBD"
                 android:layout_marginBottom="16dp" />
 
             <EditText
@@ -46,6 +54,9 @@
                 android:layout_height="wrap_content"
                 android:hint="Identificación"
                 android:inputType="number"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:backgroundTint="#BDBDBD"
                 android:layout_marginBottom="16dp" />
 
             <EditText
@@ -54,6 +65,9 @@
                 android:layout_height="wrap_content"
                 android:hint="Correo electrónico"
                 android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:backgroundTint="#BDBDBD"
                 android:layout_marginBottom="16dp" />
 
             <EditText
@@ -62,13 +76,21 @@
                 android:layout_height="wrap_content"
                 android:hint="Contraseña"
                 android:inputType="textPassword"
-                android:layout_marginBottom="24dp" />
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:backgroundTint="#BDBDBD"
+                android:layout_marginBottom="32dp" />
 
             <Button
                 android:id="@+id/btnGuardarDocente"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Guardar Docente" />
+                android:text="💾 Guardar Docente"
+                android:backgroundTint="#8E24AA"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:padding="14dp"
+                android:elevation="6dp" />
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
